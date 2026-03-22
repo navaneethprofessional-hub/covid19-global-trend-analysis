@@ -9,7 +9,7 @@ def clean_data(df):
         value_name="Confirmed"
     )
 
-    df["Date"] = pd.to_datetime(df["Date"])
+    df["Date"] = pd.to_datetime(df["Date"], format="%m/%d/%y")
 
     df = df.dropna()
     df = df.drop_duplicates()
